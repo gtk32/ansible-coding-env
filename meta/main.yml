@@ -1,0 +1,17 @@
+---
+galaxy_info:
+  role_name: ansible-coding-env
+  author: geert
+  description: "Ansible-focused coding environment with Vim, plugins, Lazygit, and shell configs."
+  license: MIT
+  min_ansible_version: 2.9
+  version: "0.1"
+  platforms:
+    - name: RedHat
+      versions:
+        - 9
+        - 10
+    - name: Fedora
+      versions:
+        - 42
+        - 43

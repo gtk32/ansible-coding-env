@@ -1,0 +1,14 @@
+---
+- name: Gather the package facts
+  ansible.builtin.package_facts:
+    manager: auto
+
+- name: Download and build VIM 9.1 from source (for RHEL 9)
+  block:
+    - name: Look for vim version
+      ansible.builtin.debug:
+        var: ansible_facts.packages['vim-enhanced'][0].version
+      when: ansible_facts.packages['vim-enhanced'][0].version is version('9', '<')
+# Ik heb even gekeken en om VIM 9.1 op RHEL 9 geinstalleerd te krijgen, moet je
+# deze pullen van git en bouwen. Lijkt me teveel moeite voor enkel coc.vim support. 
+# Derhalve het idee om coc.nvim support los in te bouwen voor RHEL 10 (en Fedora) onl
