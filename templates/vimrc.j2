@@ -1,0 +1,33 @@
+"Source all the modular files
+source ~/.vim/options.vim
+source ~/.vim/keybinds.vim
+source ~/.vim/plugins.vim
+source ~/.vim/colors.vim
+source ~/.vim/fzf.vim
+source ~/.vim/ansible-vim.vim
+source ~/.vim/nerdcommenter.vim
+" source ~/.vim/ale.vim
+
+" ALE configuration for Ansible
+let g:ale_linters = {
+\   'ansible': ['ansible-lint'],
+\   'yaml.ansible': ['ansible-lint'],
+\}
+let g:ale_linters_explicit = 1
+" Enable ALE signs and highlights
+let g:ale_set_signs = 1
+let g:ale_set_highlights = 1
+
+" Show lint messages in the status line (optional)
+let g:ale_echo_cursor = 1
+
+" Parsing options for ansible-lint
+let g:ale_ansible_ansible_lint_options = '--nocolor --parseable'
+
+" Run linters directly on the current file instead of a temp file
+let g:ale_use_temporary_files = 0
+let g:ale_sign_column_always = 1
+
+" Optional custom colors
+highlight ALEErrorSign ctermfg=Red
+highlight ALEWarningSign ctermfg=Yellow
