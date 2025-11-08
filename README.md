@@ -14,8 +14,8 @@ The playbook is tested on RHEL 9 & 10 and Fedora 43. Please be aware that additi
 Dependencies
 ------------
 
-- Ansible-core
-- community.general
+- [Ansible-core](https://docs.ansible.com/core.html)
+- [community.general](https://docs.ansible.com/ansible/latest/collections/community/general/index.html)
 
 Example Playbook
 ----------------
@@ -62,4 +62,11 @@ Key Bindings
 | <space>fi | Find files in your Vim config |
 | <C-/ | Comment / Uncomment line |
 | K | Show documentation in preview window |
-| P | Show all diagnostics | 
+| P | Show all diagnostics |
+
+Software
+--------
+- [Ansible-dev-tools](https://github.com/ansible/ansible-dev-tools)
+- [Ansible language server](https://github.com/yaegassy/coc-ansible)
+- [Vim](https://github.com/vim/vim)
+- [Lazygit](https://github.com/jesseduffield/lazygit)
