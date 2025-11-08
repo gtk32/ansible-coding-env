@@ -35,7 +35,9 @@ You can use below example to run the playbook. The playbook takes care of the in
 ```
 After the playbook has ran successfully, you have to perform some manual options:
 ```
-vim ~/.vim/vimrc # This triggers the first initialization whereby the plugins are cloned and installed
+# This triggers the first initialization whereby the plugins are cloned and installed
+vim ~/.vim/vimrc
+# Installation of coc.nvim LSP
 cd ~/.vim/vimrc/plugged/coc.nvim && npm ci # Installation of coc.nvim LSP
 
 # In vim
