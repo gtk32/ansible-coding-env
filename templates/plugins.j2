@@ -18,6 +18,9 @@ call s:ensure('rose-pine/vim')
 call s:ensure('junegunn/fzf')
 call s:ensure('junegunn/fzf.vim')
 call s:ensure('itchyny/lightline.vim')
-call s:ensure('dense-analysis/ale')
 call s:ensure('sheerun/vim-polyglot')
 call s:ensure('preservim/nerdcommenter')
+{% if ansible_distribution == 'RedHat' and ansible_distribution_major_version | int > 9 %}
+call s:ensure('neoclide/coc.nvim')
+{% endif %}
+call s:ensure('jiangmiao/auto-pairs')

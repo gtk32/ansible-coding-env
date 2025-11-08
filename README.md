@@ -1,38 +1,56 @@
 Role Name
 =========
 
-A brief description of the role goes here.
+Ansible-coding-env is a development environment especially designed for proper writing Ansible playbooks. It sets up a lean, 
+keyboard-driven workflow centered around Vim, ansible-dev-tools, and Lazygit, providing a smooth experience for automation engineers 
+who prefer a terminal-based setup as a replacement for Visual Studio Code.
 
 Requirements
 ------------
 
-Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
+The playbook is tested on RHEL 9 & 10 and Fedora 43. Please be aware that additional LSP functionallity is not supported by RHEL 9. This lies in the fact that RHEL 9 doesn't have vim >= 9 in the repositories. For LSP support and specifically ansible-language-server support, the LSP plugin coc.nvim is needed which works only for vim version >= 9.
 
-Role Variables
---------------
-
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
 Dependencies
 ------------
 
-A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
+- Ansible-core
+- community.general
 
 Example Playbook
 ----------------
 
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+You can use below example to run the playbook. The playbook takes care of the installation of software and the configuration of vim.
 
-    - hosts: servers
-      roles:
-         - { role: username.rolename, x: 42 }
+```
+---
+- name: Deploy Anisble Coding Environment
+  hosts: <servers>
+  pre_tasks:
+    - name: Gather facts
+      ansible.builtin.setup:
+        gather_subset: distribution
+  roles:
+    - role: ansible-coding-env
+```
 
-License
--------
+Key Bindings
+------------
 
-BSD
-
-Author Information
-------------------
-
-An optional section for the role authors to include contact information, or a website (HTML is not allowed).
+| Key | Action |
+| ZZ  | Save and quit |
+| ZQ  | Quit without saving |
+| <space>ff | Fuzzy find files |
+| <space>fb | Fuzzy find buffer |
+| <space>fo | Fuzzy find history |
+| <space>fh | Fuzzy find helptags |
+| <space>cd | Open netrw file explorer |
+| L | Next buffer |
+| H | Previous buffer |
+| <space>fs | Grep current string |
+| <space>fg | Grep input string |
+| <space>fc | Grep for current file name (without extension) |
+| <space>fi | Find files in your Vim config |
+| <C-/ | Comment / Uncomment line |
+| K | Show documentation in preview window |
+| P | Show all diagnostics | 
