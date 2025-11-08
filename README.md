@@ -33,11 +33,20 @@ You can use below example to run the playbook. The playbook takes care of the in
   roles:
     - role: ansible-coding-env
 ```
+After the playbook has ran successfully, you have to perform some manual options:
+```
+vim ~/.vim/vimrc # This triggers the first initialization whereby the plugins are cloned and installed
+cd ~/.vim/vimrc/plugged/coc.nvim && npm ci # Installation of coc.nvim LSP
+
+# In vim
+:CocInstall @yaegassy/coc-ansible
+```
 
 Key Bindings
 ------------
 
 | Key | Action |
+|-----|--------|
 | ZZ  | Save and quit |
 | ZQ  | Quit without saving |
 | <space>ff | Fuzzy find files |
