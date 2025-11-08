@@ -47,22 +47,22 @@ Key Bindings
 
 | Key | Action |
 |-----|--------|
-| ZZ  | Save and quit |
-| ZQ  | Quit without saving |
-| =<space>ff= | Fuzzy find files |
-| =<space>fb= | Fuzzy find buffer |
-| =<space>fo= | Fuzzy find history |
-| =<space>fh= | Fuzzy find helptags |
-| =<space>cd= | Open netrw file explorer |
-| L | Next buffer |
-| H | Previous buffer |
-| =<space>fs= | Grep current string |
-| =<space>fg= | Grep input string |
-| =<space>fc= | Grep for current file name (without extension) |
-| =<space>fi= | Find files in your Vim config |
-| =<C-/= | Comment / Uncomment line |
-| K | Show documentation in preview window |
-| P | Show all diagnostics |
+| `ZZ` | Save and quit |
+| `ZQ` | Quit without saving |
+| `<space>ff` | Fuzzy find files |
+| `<space>fb` | Fuzzy find buffer |
+| `<space>fo` | Fuzzy find history |
+| `<space>fh` | Fuzzy find helptags |
+| `<space>cd` | Open netrw file explorer |
+| `L` | Next buffer |
+| `H` | Previous buffer |
+| `<space>fs` | Grep current string |
+| `<space>fg` | Grep input string |
+| `<space>fc` | Grep for current file name (without extension) |
+| `<space>fi` | Find files in your Vim config |
+| `<C-/=` | Comment / Uncomment line |
+| `K` | Show documentation in preview window |
+| `P` | Show all diagnostics |
 
 Software
 --------
