@@ -1,0 +1,5 @@
+" Override .yml/.yaml files to use yaml.ansible filetype
+augroup ansible_filetype
+  autocmd!
+  autocmd BufNewFile,BufRead *.yml,*.yaml set filetype=yaml.ansible
+augroup END
