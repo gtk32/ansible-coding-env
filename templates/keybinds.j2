@@ -8,5 +8,8 @@ nnoremap <leader>cd :Ex<CR>
 nnoremap EE :source %<CR>
 
 " Switch between open buffers (tabs)
-nnoremap H :bprevious<CR>
-nnoremap L :bnext<CR>
+nnoremap <C-,> :bprevious<CR>
+nnoremap <C-.> :bnext<CR>
+
+" Toggle relative linenumber
+nnoremap <leader>nu :set rnu!<CR>

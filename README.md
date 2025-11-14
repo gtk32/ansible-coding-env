@@ -8,7 +8,7 @@ who prefer a terminal-based setup as a replacement for Visual Studio Code.
 Requirements
 ------------
 
-The playbook is tested on RHEL 9 & 10 and Fedora 43. Please be aware that additional LSP functionallity is not supported by RHEL 9. This lies in the fact that RHEL 9 doesn't have vim >= 9 in the repositories. For LSP support and specifically ansible-language-server support, the LSP plugin coc.nvim is needed which works only for vim version >= 9.
+The playbook is tested on RHEL 9 & 10 and Fedora 43.
 
 
 Dependencies
@@ -37,11 +37,6 @@ After the playbook has ran successfully, you have to perform some manual options
 ```
 # This triggers the first initialization whereby the plugins are cloned and installed
 vim ~/.vim/vimrc
-# Installation of coc.nvim LSP
-cd ~/.vim/vimrc/plugged/coc.nvim && npm ci # Installation of coc.nvim LSP
-
-# In vim
-:CocInstall @yaegassy/coc-ansible
 ```
 
 Key Bindings
@@ -56,19 +51,19 @@ Key Bindings
 | `<space>fo` | Fuzzy find history |
 | `<space>fh` | Fuzzy find helptags |
 | `<space>cd` | Open netrw file explorer |
-| `L` | Next buffer |
-| `H` | Previous buffer |
+| `Cntl + .` | Next buffer |
+| `Cntl + ,` | Previous buffer |
 | `<space>fs` | Grep current string |
 | `<space>fg` | Grep input string |
 | `<space>fc` | Grep for current file name (without extension) |
 | `<space>fi` | Find files in your Vim config |
-| `<C-/=` | Comment / Uncomment line |
-| `K` | Show documentation in preview window |
-| `P` | Show all diagnostics |
+| `<C-/` | Comment / Uncomment line |
+| `<space>nu` | Toggle between relative and absolute line numbers |
 
 Software
 --------
 - [Ansible-dev-tools](https://github.com/ansible/ansible-dev-tools)
-- [Ansible language server](https://github.com/yaegassy/coc-ansible)
 - [Vim](https://github.com/vim/vim)
 - [Lazygit](https://github.com/jesseduffield/lazygit)
+- [Fzf](https://github.com/junegunn/fzf)
+- [Ripgrep](https://github.com/BurntSushi/ripgrep)

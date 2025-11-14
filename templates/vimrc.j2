@@ -6,11 +6,3 @@ source ~/.vim/colors.vim
 source ~/.vim/fzf.vim
 source ~/.vim/ansible-vim.vim
 source ~/.vim/nerdcommenter.vim
-{% if ansible_distribution == 'RedHat' and ansible_distribution_major_version | int > 9 %}
-source ~/.vim/coc.vim
-{% endif %}
-
-" You also need to set g:coc_filetype_map in your vimrc
-let g:coc_filetype_map = {
-  \ 'yaml.ansible': 'ansible',
-  \ }
