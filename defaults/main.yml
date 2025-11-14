@@ -1,0 +1,22 @@
+---
+lazygit_major_version: 0
+lazygit_minor_version: 55
+lazygit_patch: 1
+
+vim_templates:
+  - src: vimrc.j2
+    dest: '~/.vim/vimrc'
+  - src: plugins.j2
+    dest: '~/.vim/plugins.vim'
+  - src: options.j2
+    dest: '~/.vim/options.vim'
+  - src: keybinds.j2
+    dest: '~/.vim/keybinds.vim'
+  - src: fzf.j2
+    dest: '~/.vim/fzf.vim'
+  - src: colors.j2
+    dest: '~/.vim/colors.vim'
+  - src: ansible-vim.j2
+    dest: '~/.vim/ansible-vim.vim'
+  - src: nerdcommenter.j2
+    dest: '~/.vim/nerdcommenter.vim'

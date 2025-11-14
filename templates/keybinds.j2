@@ -1,0 +1,15 @@
+" Set leader key
+let mapleader = " "
+
+" Open netrw with <leader>cd
+nnoremap <leader>cd :Ex<CR>
+
+" Source file with <leader>so
+nnoremap EE :source %<CR>
+
+" Switch between open buffers (tabs)
+nnoremap <C-,> :bprevious<CR>
+nnoremap <C-.> :bnext<CR>
+
+" Toggle relative linenumber
+nnoremap <leader>nu :set rnu!<CR>

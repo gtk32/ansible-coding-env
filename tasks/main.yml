@@ -1,0 +1,21 @@
+---
+- name: Check supported OS & versions
+  ansible.builtin.fail:
+    msg: Server does not meet requirments.
+  when: >
+    (ansible_distribution not in ["RedHat", "Fedora"])
+     or
+    (ansible_distribution == "RedHat" and ansible_distribution_major_version | int < 9)
+  tags:
+    - general
+    - vim
+- name: Deploy general.yml
+  ansible.builtin.include_tasks:
+    file: general.yml
+  tags:
+    - general
+- name: Deploy vim.yml
+  ansible.builtin.import_tasks:
+    file: vim.yml
+  tags:
+    - vim
