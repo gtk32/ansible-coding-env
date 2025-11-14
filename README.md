@@ -60,6 +60,14 @@ Key Bindings
 | `<C-/` | Comment / Uncomment line |
 | `<space>nu` | Toggle between relative and absolute line numbers |
 
+Terminal aliases
+----------------
+| Key | Action |
+|-----|--------|
+| lg | Start lagygit |
+| gcb | Initiate command `git branch --show-current` |
+| gab | Initiate command `git branch --all` |
+
 Software
 --------
 - [Ansible-dev-tools](https://github.com/ansible/ansible-dev-tools)
