@@ -57,7 +57,7 @@ Key Bindings
 | `<space>fg` | Grep input string |
 | `<space>fc` | Grep for current file name (without extension) |
 | `<space>fi` | Find files in your Vim config |
-| `<C-/` | Comment / Uncomment line |
+| `Cntl + /` | Comment / Uncomment line |
 | `<space>nu` | Toggle between relative and absolute line numbers |
 
 Terminal aliases
