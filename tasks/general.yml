@@ -29,13 +29,13 @@
       ansible.builtin.dnf:
         name: python3.12
         state: present
-      when: ansible_distribution_major_version | int == 9
+      when: ansible_facts['distribution_major_version'] | int == 9
     - name: Install pip package manager
       ansible.builtin.dnf:
         name: "{{ pip_package }}"
         state: present
       vars:
-        pip_package: "{{ 'python3.12-pip' if ansible_distribution_major_version | int == 9 else 'python3-pip' }}"
+        pip_package: "{{ 'python3.12-pip' if ansible_facts['distribution_major_version'] | int == 9 else 'python3-pip' }}"
     - name: Install ansible-dev-tools via pip
       ansible.builtin.pip:
         name: ansible-dev-tools

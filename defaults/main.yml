@@ -20,3 +20,5 @@ vim_templates:
     dest: '~/.vim/ansible-vim.vim'
   - src: nerdcommenter.j2
     dest: '~/.vim/nerdcommenter.vim'
+  - src: ansible.j2
+    dest: '~/.vim/after/ftdetect/ansible.vim'
