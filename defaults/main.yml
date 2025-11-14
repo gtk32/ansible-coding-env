@@ -20,9 +20,3 @@ vim_templates:
     dest: '~/.vim/ansible-vim.vim'
   - src: nerdcommenter.j2
     dest: '~/.vim/nerdcommenter.vim'
-
-vim_templates_lsp:
-  - src: coc.j2
-    dest: '~/.vim/coc.vim'
-  - src: coc-settings.j2
-    dest: '~/.vim/coc-settings.json'

@@ -36,11 +36,3 @@
     mode: '0644'
   become: false
   loop: "{{ vim_templates }}"
-- name: Deploy additional configuration files for VIM 9.0 systemd
-  ansible.builtin.template:
-    src: "{{ item.src }}"
-    dest: "{{ item.dest }}"
-    mode: '0644'
-  become: false
-  loop: "{{ vim_templates_lsp }}"
-  when: "{{ ansible_facts.distribution_major_version | int > 9 }}"
