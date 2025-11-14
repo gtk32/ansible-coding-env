@@ -64,9 +64,9 @@ Terminal aliases
 ----------------
 | Key | Action |
 |-----|--------|
-| lg | Start lagygit |
-| gcb | Initiate command `git branch --show-current` |
-| gab | Initiate command `git branch --all` |
+| `lg` | Start lagygit |
+| `gcb` | Initiate command `git branch --show-current` |
+| `gab` | Initiate command `git branch --all` |
 
 Software
 --------
